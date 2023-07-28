@@ -1,0 +1,21 @@
+name: BasicCommands
+version: 1.0.0
+main: at.avox.basicCommands.BasicCommandsPlugin
+description: A simple plugin with basic commands
+author: Nox
+website: https://plugins.avox.at
+api-version: '1.20'
+
+permissions:
+  bc.heal:
+    description: "Allows you to heal yourself"
+    default: op
+
+commands:
+  heal:
+    description: 'Heals you'
+    usage: '/heal'
+    aliases:
+      - h
+    permission: bc.heal
+    permission-message: You do not have permission to use this command
