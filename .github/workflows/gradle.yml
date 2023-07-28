@@ -50,8 +50,8 @@ jobs:
                     asset_name: BasicCommands-${{ env.version_name }}.jar
                     asset_content_type: application/java-archive
 
-            -   uses: eregon/publish-release@v1
+            -   uses: StuYarrow/publish-release@v1.1.2
                 env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 with:
-                    release_id: ${{ steps.create_release.outputs.id }}
+                    id: ${{ steps.create_release.outputs.id }}
