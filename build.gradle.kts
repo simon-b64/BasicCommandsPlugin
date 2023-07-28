@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "at.avox"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -24,4 +24,8 @@ tasks.test {
 
 kotlin {
     jvmToolchain(17)
+}
+
+task("printVersionName") {
+    println(version)
 }
