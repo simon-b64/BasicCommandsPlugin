@@ -21,12 +21,6 @@ jobs:
             -   name: Execute Gradle build
                 run: ./gradlew build
 
-            -   name: Upload artifacts
-                uses: actions/upload-artifact@v2
-                with:
-                    name: Build
-                    path: build/libs
-
             -   name: Retrieve Version
                 run: |
                     echo "::set-output name=VERSION_NAME::$(${{github.workspace}}/gradlew -q printVersionName)"
