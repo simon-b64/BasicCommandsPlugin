@@ -1,5 +1,6 @@
 package at.avox.basicCommands
 
+import at.avox.basicCommands.commands.CustomGameModeCmd
 import at.avox.basicCommands.commands.HealCmd
 import at.avox.basicCommands.eventListeners.PlayerDeathListener
 import org.bukkit.Bukkit
@@ -17,6 +18,7 @@ class BasicCommandsPlugin: JavaPlugin() {
 
     private fun registerCommands() {
         this.getCommand("heal")?.setExecutor(HealCmd())
+        this.getCommand("gm")?.setExecutor(CustomGameModeCmd())
     }
 
     private fun registerEventHandlers() {

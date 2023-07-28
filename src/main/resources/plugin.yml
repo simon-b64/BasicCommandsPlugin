@@ -1,5 +1,5 @@
 name: BasicCommands
-version: 1.0.2
+version: 1.0.3
 main: at.avox.basicCommands.BasicCommandsPlugin
 description: A simple plugin with basic commands
 author: Nox
@@ -7,15 +7,21 @@ website: https://plugins.avox.at
 api-version: '1.20'
 
 permissions:
-  bc.heal:
-    description: "Allows you to heal yourself"
-    default: op
+    bc.heal:
+        description: 'Allows you to heal yourself or the player you specify'
+        default: op
+    bc.gm:
+        description: 'Allows you to change your and others gamemode'
+        default: op
 
 commands:
-  heal:
-    description: 'Heals you'
-    usage: '/heal'
-    aliases:
-      - h
-    permission: bc.heal
-    permission-message: You do not have permission to use this command
+    heal:
+        description: 'Heals you or the player you specify'
+        usage: '/heal {Player}'
+        permission: bc.heal
+        permission-message: You do not have permission to use this command
+    gm:
+        description: 'Changes yous or others gamemode'
+        usage: '/gm [GameModeNumber] {Player}'
+        permission: bc.gm
+        permission-message: You do not have permission to use this command
