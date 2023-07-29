@@ -16,6 +16,9 @@ permissions:
     bc.ec:
         description: 'Allows you to open your enderchest with a command'
         default: op
+    bc.repair:
+        description: 'Allows you to use the repair command'
+        default: op
 
 commands:
     heal:
@@ -32,4 +35,9 @@ commands:
         description: 'Opens your enderchest'
         usage: '/ec'
         permission: bc.ec
+        permission-message: You do not have permission to use this command
+    repair:
+        description: 'Repairs the tool you are holding'
+        usage: '/repair'
+        permission: bc.repair
         permission-message: You do not have permission to use this command
