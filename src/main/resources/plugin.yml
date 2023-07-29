@@ -13,6 +13,9 @@ permissions:
     bc.gm:
         description: 'Allows you to change your and others gamemode'
         default: op
+    bc.ec:
+        description: 'Allows you to open your enderchest with a command'
+        default: op
 
 commands:
     heal:
@@ -24,4 +27,9 @@ commands:
         description: 'Changes yous or others gamemode'
         usage: '/gm [GameModeNumber] {Player}'
         permission: bc.gm
+        permission-message: You do not have permission to use this command
+    ec:
+        description: 'Opens your enderchest'
+        usage: '/ec'
+        permission: bc.ec
         permission-message: You do not have permission to use this command
